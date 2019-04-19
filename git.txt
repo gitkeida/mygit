@@ -1,4 +1,6 @@
 git 命令：
+    git init    # 初始化目录 创建仓库
+
     git add test.txt    # 添加 test.txt  把文件添加到仓库（提交修改到暂存区）
 
     git commit -m "this a test file"    # 提交 -m后面输入的是本次提交的说明 （把暂存区的内容提交到当前分支）
