@@ -21,4 +21,7 @@ git 命令：
     git reset --hard HEAD^      # 返回上一个版本
     git reset --hard <63dbd>    # 返回到指定版本 <63dbd> 为commit_id  git reset --hard 63dbd
 
-    git reflog      # 记录每一次命令
+    git reflog      # 显示记录的每一次命令
+
+    git diff HEAD -- readme.txt     # 查看当前文件和 版本库文件差异
+    git checkout -- readme.txt      # 丢弃工作区域的修改 （把readme.txt文件在工作区的修改全部撤销）
