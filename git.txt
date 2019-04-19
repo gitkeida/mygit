@@ -1,7 +1,7 @@
 git 命令：
-    git add test.txt    # 添加 test.txt  把文件添加到仓库（提交修改）
+    git add test.txt    # 添加 test.txt  把文件添加到仓库（提交修改到暂存区）
 
-    git commit -m "this a test file"    # 提交 -m后面输入的是本次提交的说明
+    git commit -m "this a test file"    # 提交 -m后面输入的是本次提交的说明 （把暂存区的内容提交到当前分支）
 
  为什么Git添加文件需要add，commit一共两步呢？因为commit可以一次提交很多文件，所以你可以多次add不同的文件，比如：
 
@@ -12,3 +12,13 @@ git 命令：
 
     git status      # 查看仓库状态
     git diff readme.txt    # 查看文件差异 （修改过的内容）
+
+    git log         # 查看历史修改记录
+    git log --pretty=oneline        # 每条只显示一行
+
+    在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^。当然往上100个版本写成HEAD~100。
+
+    git reset --hard HEAD^      # 返回上一个版本
+    git reset --hard <63dbd>    # 返回到指定版本 <63dbd> 为commit_id  git reset --hard 63dbd
+
+    git reflog      # 记录每一次命令
