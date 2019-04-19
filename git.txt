@@ -24,5 +24,7 @@ git 命令：
     git reflog      # 显示记录的每一次命令
 
     git diff HEAD -- readme.txt     # 查看当前文件和 版本库文件差异
-    git checkout -- readme.txt      # 丢弃工作区域的修改 （把readme.txt文件在工作区的修改全部撤销）
+    git checkout -- readme.txt      # 丢弃工作区域的修改 （把readme.txt文件在工作区的修改全部撤销）（其实就是用版本库里的文件替换工作区域的文件）
     git reset HEAD readme.txt       # 丢弃暂存区的修改
+
+    git rm test.txt         # 用于删除一个文件
