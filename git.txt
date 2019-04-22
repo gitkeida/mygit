@@ -1,4 +1,4 @@
-git 命令：
+﻿git 命令：
     git init    # 初始化目录 创建仓库
 
     git add test.txt    # 添加 test.txt  把文件添加到仓库（提交修改到暂存区）
@@ -15,8 +15,8 @@ git 命令：
     git status      # 查看仓库状态
     git diff readme.txt    # 查看文件差异 （修改过的内容）
 
-    git log         # 查看历史修改记录
-    git log --pretty=oneline        # 每条只显示一行
+    git log         # 查看历史修改记录	按 Q 退出
+    git log --pretty=oneline        # 简化显示提交历史，每条只显示一行
 
     在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^。当然往上100个版本写成HEAD~100。
 
@@ -30,3 +30,45 @@ git 命令：
     git reset HEAD readme.txt       # 丢弃暂存区的修改
 
     git rm test.txt         # 用于删除一个文件
+
+
+远程库：
+    git remote add origin git@github.com:gitkeida/mygit.git 		# 关联远程库 （把本地的库和远程库关联）
+    git clone git@github.com:gitkeida/mygit.git			# 克隆远程库 （把远程的库克隆到本地）
+    git push -u origin master 		# 关联后第一次 推送到远程库 master 分支
+    
+   此后，每次本地提交后，就可以使用命令推送最新修改
+    git push origin master 	# 推送到远程库
+
+分支：
+    创建+切换分支：
+	git checkout -b dev 
+
+	git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+		$ git branch dev
+		$ git checkout dev
+    查看分支：
+	git branch
+    
+    切换分支：
+	git checkout master
+
+    合并分支：
+	git merge dev  	#git merge命令用于合并指定分支到当前分支
+
+    删除分支：
+	git branch -d dev
+
+    总结：
+	查看分支：git branch
+	创建分支：git branch <name>
+	切换分支：git checkout <name>
+	创建+切换分支：git checkout -b <name>
+	合并某分支到当前分支：git merge <name>
+	删除分支：git branch -d <name>
+
+git log --graph  # 可以看到分支合并图
+
+git stash  	# 把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
+
