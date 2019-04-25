@@ -87,4 +87,7 @@ Bug 分支：
    恢复并删除：
       git stash pop
 
+多人协作：
+   查看远程库信息：
+      git remote     # 查看详细信息：  git remote -v
 
